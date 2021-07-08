@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "pentangle/laravel-crontab-editor",
+    "description": "registers commands that can enable cron for laravel",
     "keywords": [
-        ":vendor_name",
+        "Pentangle",
         "laravel",
-        "package_slug"
+        "laravel-crontab-editor"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/pentangle/laravel-crontab-editor",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Séan Poynter-Smith",
+            "email": "spoyntersmith@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Pentangle\\LaravelCrontabEditor\\": "src",
+            "Pentangle\\LaravelCrontabEditor\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Pentangle\\LaravelCrontabEditor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Pentangle\\LaravelCrontabEditor\\LaravelCrontabEditorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "LaravelCrontabEditor": "Pentangle\\LaravelCrontabEditor\\LaravelCrontabEditorFacade"
             }
         }
     },

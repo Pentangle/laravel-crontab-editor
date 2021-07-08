@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Pentangle\LaravelCrontabEditor\Tests;
 
 class ExampleTest extends TestCase
 {
