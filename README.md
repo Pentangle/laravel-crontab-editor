@@ -28,8 +28,7 @@ return [
 ## Usage
 
 ```php
-$laravel-crontab-editor = new Pentangle\LaravelCrontabEditor();
-echo $laravel-crontab-editor->echoPhrase('Hello, Spatie!');
+php artisan crontab-editor:setup
 ```
 
 ## Testing
