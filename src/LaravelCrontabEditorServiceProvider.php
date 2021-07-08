@@ -2,9 +2,9 @@
 
 namespace Pentangle\LaravelCrontabEditor;
 
+use Pentangle\LaravelCrontabEditor\Commands\RegisterCronJob;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Pentangle\LaravelCrontabEditor\Commands\RegisterCronJob;
 
 class LaravelCrontabEditorServiceProvider extends PackageServiceProvider
 {
