@@ -45,5 +45,6 @@ class RegisterCronJob extends Command
         $crontabJob = CrontabJob::createFromCrontabLine('* * * * * cd '.$path.' && php artisan schedule:run >> /dev/null 2>&1');
         $crontabRepository->addJob($crontabJob);
         $crontabRepository->persist();
+        echo "cron job enabled\n";
     }
 }

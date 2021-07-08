@@ -7,14 +7,14 @@ use TiBeN\CrontabManager\CrontabAdapter;
 use TiBeN\CrontabManager\CrontabJob;
 use TiBeN\CrontabManager\CrontabRepository;
 
-class DisableCronJob extends Command
+class CheckCronJob extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'crontab-editor:disable';
+    protected $signature = 'crontab-editor:check';
 
     /**
      * The console command description.
@@ -36,7 +36,7 @@ class DisableCronJob extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return bool
      */
     public function handle()
     {
@@ -46,12 +46,6 @@ class DisableCronJob extends Command
 
         $check = collect()->push($crontabJob);
 
-        if (collect($crontabRepository->getJobs())->contains($check->first())) {
-            $results = $crontabRepository->findJobByRegex('/php\ artisan\ schedule:run/');
-            $crontabJob = $results[0];
-            $crontabRepository->removeJob($crontabJob);
-            $crontabRepository->persist();
-            echo "cron job removed\n";
-        }
+        echo collect($crontabRepository->getJobs())->contains($check->first()) ? "cron job enabled\n" : "cron job disabled\n";
     }
 }
