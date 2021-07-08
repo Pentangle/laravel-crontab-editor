@@ -2,9 +2,9 @@
 
 namespace Pentangle\LaravelCrontabEditor;
 
+use Pentangle\LaravelCrontabEditor\Commands\LaravelCrontabEditorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Pentangle\LaravelCrontabEditor\Commands\LaravelCrontabEditorCommand;
 
 class LaravelCrontabEditorServiceProvider extends PackageServiceProvider
 {
