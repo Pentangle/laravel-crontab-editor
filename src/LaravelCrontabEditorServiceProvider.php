@@ -2,6 +2,8 @@
 
 namespace Pentangle\LaravelCrontabEditor;
 
+use Pentangle\LaravelCrontabEditor\Commands\CheckCronJob;
+use Pentangle\LaravelCrontabEditor\Commands\DisableCronJob;
 use Pentangle\LaravelCrontabEditor\Commands\RegisterCronJob;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -18,6 +20,8 @@ class LaravelCrontabEditorServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-crontab-editor')
             ->hasConfigFile()
+            ->hasCommand(CheckCronJob::class)
+            ->hasCommand(DisableCronJob::class)
             ->hasCommand(RegisterCronJob::class);
     }
 }
